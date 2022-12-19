@@ -1,0 +1,697 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Secular+One&display=swap');
+
+/* Colors ---------------------------------
+
+Header and Footer: #E07F5A (peachish-brown)
+Buttons: #F3911D (sunrise orange)
+
+Background elements and illustrations:
+#78B6BA (grey-teal)
+#79B794 (lighter green)
+#72AC8E (green)
+#EE945D (orange juice)
+#F4B266 (lighter orange juice)
+#E8A6B2 (lighter pink)
+#F498A1 (blush pink)
+#CD5C5C ("indianred") 
+
+Text:
+#FFF (white)
+#000000 (black)
+
+-----------------------------------------*/
+
+/* Universal selections and rules */
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	box-sizing: border-box;
+}
+
+/* box model Fix */
+
+*, *:before, *:after {
+	box-sizing: inherit;
+	box-sizing: border-box;
+}
+
+/* clear Fix */
+
+.row:before,
+.row:after {
+	content: " ";
+	display: table;
+}
+
+.row:after {
+	clear: both;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	background-color: lightblue;
+	height: auto;
+}
+
+img {
+	width: 100%;
+}
+
+.container-fluid {
+	padding: 0;
+	overflow: hidden;
+}
+
+h1 {
+	font-size: 5em;
+	font-family: 'Fredoka One', cursive;
+	color: #fff;
+	line-height: .9;
+}
+
+#heroChunk h1{
+	margin-top: -10px;
+	font-size: 8em;
+	font-family: 'Fredoka One', cursive;
+	color: #fff}
+
+h2 {
+	font-family: 'Fredoka One', sans-serif;
+	color: #fff;
+}
+
+h3 {
+	font-family: 'Fredoka One', sans-serif;
+	color: #fff;
+	font-size: 1.6em;
+}
+
+#address h4 {
+	font-family: 'Fredoka One', sans-serif;
+	color: #161616;
+	text-align: center;
+	font-size: 1em;
+}
+
+#address span {
+	font-family: 'Fredoka One', sans-serif;
+	font-size: 1.5em}
+
+h6 {
+	font-family: 'Secular One', sans-serif;
+	color: #fff;
+	font-size: 2rem;
+}
+
+p {
+	color: #fff
+}
+
+header {
+	background-color: #e07f5a;
+	position: fixed;
+	height: 80px;
+	z-index: 6;
+}
+
+header > img {
+	position: absolute;
+}
+
+header img {
+	width: 100%
+}
+
+header a {
+	color: #fff;
+	font-weight: bold;
+}
+
+#logo1 {
+	display: none;
+}
+
+#logo2 {
+	width: 20px;
+}
+
+.flexRow {
+	padding-left: 5vw;
+	padding-right: 5vw;
+	width: 100vw;
+	margin: 20px auto;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.centerVert {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: fit-content;
+}
+
+.spacingGrid {
+	width: 400px;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 1fr;
+	column-gap: 5%;
+	align-items: center;
+	justify-content: center;
+	justify-items: center;
+	align-content: space-between;
+	color: black;
+}
+
+#header1 {
+	padding: 0.5rem;
+	text-decoration: none;
+}
+
+#header2 {
+	padding: 0.5rem;
+	text-decoration: none;
+}
+
+#header3 {
+	padding: 0.5rem;
+	text-decoration: none;
+}
+
+#badge {
+	background-color: #f3911d;
+	position: fixed;
+	right: 10vw;
+	bottom: 10vw;
+	text-align: center;
+	border-radius: 10px;
+	box-shadow: 3px 5px 15px;
+	z-index: 6;
+}
+
+#mobileGhost {
+	display: none;
+	position: fixed;
+	left: 10vw;
+	bottom: 10vw;
+	text-align: center;
+	z-index: 6;
+}
+
+#badge a {
+	color: #fff;
+	width: 120px;
+	display: inline-block;
+	line-height: 20px;
+	text-decoration: none;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+#hero {
+	padding-top: 80px;
+	background-image: url(../images/hero.png);
+	background-position: center bottom;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+}
+
+#hero > img {
+	position: absolute;
+	opacity: 0.03;
+}
+
+#heroChunk {
+	text-align: center;
+	padding-top: 220px;
+	padding-bottom: 420px;
+}
+
+#drinks {
+	background-image: url(../images/values.png);
+	background-position: center bottom;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+}
+
+#drinks > img {
+	position: absolute;
+	opacity: 0.1;
+}
+
+#drinks h1 {
+	margin-top: 183px;
+}
+
+#drinks h2 {
+	text-align: center;
+}
+
+#drinks p {
+	padding-bottom: 200px;
+}
+
+#drinks img {
+	mix-blend-mode: soft-light;
+}
+
+#values {
+	margin-top: -2px;
+	background-image: url(../images/drinks.png);
+	background-position: center bottom;
+	background-repeat: no-repeat;
+	background-size: cover;
+	padding-bottom: 50px;
+	position: relative;
+}
+
+#values > img {
+	position: absolute;
+	opacity: 0.05;
+}
+
+#values h2 {
+	text-align: center;
+}
+
+#values img {
+	margin-top: 0;
+}
+
+#groupTable img {
+	padding-top: 100px;
+
+}
+#textAbout {
+	margin-top: 300px;
+}
+
+#gallery {
+	margin-top: -1px;
+	background-image: url(../images/gallery.png);
+	background-position: center bottom;
+	background-repeat: no-repeat;
+	background-size: cover;
+	text-align: center;
+	position: relative;
+}
+
+#gallery > img {
+	position: absolute;
+	opacity: 0.03;
+	left: 0;
+}
+
+#gallery img {
+	width: 100%;
+	padding-bottom: 165px;
+}
+
+#gallery h1 {
+	margin-top:	50px;
+	padding-top: 80px;
+	padding-bottom:25px;
+}
+
+hr {
+	margin: 0;
+	opacity: 1;
+}
+
+#nextTime {
+	padding: 50px;
+	background-color: indianred;
+}
+
+#crayons {
+	margin-top: -1px;
+	padding-top: 60px;
+	background-image: url(../images/crayons.png);
+	background-position: center bottom;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+}
+
+#crayons > img {
+	position: absolute;
+	opacity: 0.03;
+}
+
+#crayons img {
+	margin-top: -338px;
+}
+
+#crayons h1 {
+	padding-top: 50px;
+}
+
+#colors {
+	margin-top: -36px;
+}
+
+#news {
+	margin-top: -1px;
+	background-image: url(../images/news.png);
+	background-position: center bottom;
+	background-repeat: no-repeat;
+	background-size: cover;
+	padding-bottom: 352px;
+	position: relative;
+}
+
+#news > img {
+	position: absolute;
+	opacity: 0.04;
+	z-index: 1;
+}
+
+#newsletter {
+	position: relative;
+	z-index: 2;
+	padding-top: 180px;
+}
+
+.form-control {
+	margin: 20px 0;
+	width: 92%;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #f3911d;
+    border-color: #f3911d;
+}
+
+ #location {
+	padding-top: 80px;
+	background-image: url(../images/location.png);
+	background-position: center bottom;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+}
+
+#location h1 {
+	margin-top: 100px;
+	text-align: center;
+}
+
+#location h2 {
+	margin-top: 10px;
+	margin-bottom: 55px;
+	text-align: center;
+}
+#location > img {
+	position: absolute;
+	opacity: 0.03;
+}
+
+#locationChunk {
+	margin-bottom: 500px;
+}
+
+#locationChunk {
+	height: 700px;
+}
+
+footer {
+	margin-top: -250px;
+	padding-bottom: 50px;
+	background-image: url("../images/ghostLogopattern.svg")	;
+	background-repeat: 	repeat;
+	background-color: #e07f5a;
+	background-size: 200px 200px;
+	color: #fff;
+	position: relative;
+	z-index: 4;
+	}
+
+footer > img {
+	position: absolute;
+	mix-blend-mode: soft-light;
+	opacity: 0.3;
+	width: 150%;
+}
+
+footer h4 {
+	padding: 2rem;
+	font-family: "GT-Light";
+}
+
+footer h6 {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 0.9em;
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+
+#partners {
+	text-align: center;
+	color: #161616;
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 200px;
+	margin-bottom: 30px;
+	padding: 0 5%;
+}
+
+#footerTag {
+	padding-top: 50px;
+}
+
+#partners ul {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+footer li {
+	float: left;
+	display: flex;
+	flex-direction: row;
+	text-align: center;
+	font-family: 'Poppins';
+	font-size: 14px;
+	padding-bottom: 15px;
+}
+
+#foot-links {
+	margin-top: 40px;
+}
+
+#foot-links li:first-child {
+	font-weight: 600;
+	padding-bottom: 30px;
+}
+
+#foot-links ul {
+	display: flex;
+	flex-direction: column;
+}
+
+#foot-links li {
+	text-align: left;
+}
+
+#foot-links img {
+	max-width: 70px;
+}
+
+#socials {
+	display: flex;
+	flex-direction: row;
+}
+
+#legal {
+	text-align: right;
+}
+
+#legal span {
+	margin-left: 30px;
+}
+
+#bottom {
+	justify-content: space-between;
+	font-size: 12px;
+	margin-top: 40px;
+	color: antiquewhite;
+}
+
+#terms li {
+	float: left;
+}
+
+#texture {
+	height: 0;
+	overflow: visible;
+	mix-blend-mode: soft-light;
+	position: relative;
+	z-index: 1;
+}
+
+#ghostFoot img {
+	width: 150px;
+	display: flex;
+	justify-content: center;
+}
+
+#badge img {
+	display: none;
+}
+
+/*************** Media Queries *************/
+
+@media only screen and (max-width: 600px) {
+
+	.added_space {
+		padding-right: 54px;
+		padding-left: 54px;
+	}
+
+  	h1 {
+  		font-size: 3rem;
+    	color: #fff;
+  	} 
+
+  	h2 {
+  		font-size: 2rem;
+  	}
+
+  #news	h2 {
+  		padding-top: 20px;
+  		font-size: 2rem;
+  	}
+
+  	h3 {
+  		font-size: 1rem;
+  	}
+
+	footer h3 {
+		color: black;
+		font-size: 2rem;
+		padding-bottom: -0px;
+	}
+
+	footer h4 {
+		padding-top: 20px;
+	}
+
+  	footer h6 {
+  		font-size: 0.5rem;
+  		padding-bottom: 100px;
+  	}
+  	
+  	#header3 {
+  		display: none;
+  	}
+
+/* Make the child element (textures) go away
+in mobile view */
+
+  	#hero > img {
+  		display: none;
+  	}
+
+   	#values > img {
+   		display: none;
+   	}
+
+   	#drinks > img {
+   		display: none;
+   	}
+
+ 	#gallery > img {
+ 		display: none;
+ 	}
+
+  	#crayons img {
+  		display: none;
+  	}
+
+  	#news > img {
+  		display: none;
+  	}
+
+  	#hideImage {
+  		display: none;
+  	}
+
+  	#gallery img {
+  		padding-bottom: 16px;
+  	}
+
+	.spacingGrid {
+		width: 400px;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 1fr;
+		column-gap: 5%;
+		align-items: center;
+		justify-content: center;
+		justify-items: center;
+		align-content: space-between;
+		color: black;
+	}
+
+	#textAbout {
+		margin-top: 40px;
+	}
+
+	#drinks p {
+		padding-bottom: 40px;
+	}
+
+	.offset-1 {
+		margin-left: 0
+	}
+	
+	.offset-2 {
+		margin-left: 0
+	}
+
+	.offset-4 {
+		margin-left: 0;
+	}
+
+	#partners {
+		margin-top: 20px;
+	}
+
+	#address {
+		margin-top: -20px;
+	}
+
+	#crayons p {
+		margin-top: -30px;
+		padding-bottom: 40px;
+	}
+
+	#badge img {
+		height: 20px;
+	}
+
+	#locationChunk {
+		margin-bottom: 100px;
+	}
+
+	#mobileGhost {
+		display: block;
+	}
+
+  }
+
+  /* Oh YEAH look at that p e r f e c t spacing, no double-spaced essays here anymore
+     content organization still not the greatest but improvement! (I would hope at least) */
